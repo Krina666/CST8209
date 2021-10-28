@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Changqi Li">
+    <meta name="email" content="li000716@algonquinlive.com ">
+    <title>Cosmetic discount season</title>
+</head>
+
+<body>
+    <h1>Register to purchase cosmetics and enjoy a 20% discount</h1>
+    <legend> Registar</legend>
+    <form name="profile">
+        <fieldset>
+            <label> FirstName:  </label>
+            <input type="text" id="firstName" name="firstName" maxlength=20 minlength="1">
+            <span id="fnameWaring" class="alert"></span>
+            <br>    
+            <label> LastName:  </label>
+            <input type="text" id="lastName" name="lastName">
+            <span id="lnameWaring" class="alert"></span>
+            <br>
+            <label>Gender: </label>
+            <input type="radio" id="female" name="gender" value="female" checked>
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">other</label>
+            <span id="genderWarning" class="alert"></span>
+            <br>
+            <label>Date: </label>
+            <input type="date" id="date" name="date">
+            <span id="dateWarning" class="alert"></span>
+            <br>
+            <label> Age:  </label>
+            <input type="number" id="age" name="age" max="70" min="10">
+            <span id="ageWaring" class="alert"></span>
+            <br>
+            <label for="brand">FavoriteBrand</label>
+            <input list="brand" id="binfo">
+            <datalist id="brand">
+                <option value="Dior">
+                <option value="Chanel">
+                <option value="Lancome">
+                <option value="MAC">
+            </datalist>
+            <span id="brandWarning" class="alert"></span>
+            <br>
+            
+            <label>City: </label>
+            <input type="text" id="city" name="city">
+            <span id="cityWarning" class="alert"></span>
+            <br>
+
+            <label>Province:  </label>
+            <select id="province" name="province">
+                <option value="">Select Province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="YT">Yukon</option>
+            </select>
+            <span id="provinceWarning" class="alert"></span>
+            <br>
+
+            <label>Country:  </label>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="CA">Canada</option>
+                <option value="US">United States</option>
+                <option value="OTH">Other</option>
+            </select>
+            <span id="countryWarning" class="alert"></span>
+            <br>
+
+            <label> Product selection: </label><br>
+            <input type="checkbox" id="es" name="pro" value="es">
+            <label for="es">Eye shadow</label><br>
+            <input type="checkbox" id="ma" name="pro" value="ma">
+            <label for="ma">Mascara</label><br>
+            <input type="checkbox" id="bl" name="pro" value="bl">
+            <label for="bl">Blusher</label><br>
+            <input type="checkbox" id="li" name="pro" value="li">
+            <label for="li">Lipstick</label><br>
+            <br>
+            <input type="reset" value="Reset" name="resetBtn">
+            <input type="submit" value="Submit" name="submitBtn">
+
+        </fieldset>
+    </form>
+    <h2>Cosmetics</h2>
+
+    <p>Click on image to add to cart</p>
+    <table>
+        <tr>
+            <td colspan="3">
+                <img src="img/Eye shadow.png" alt="shadow" id="shadow">
+                <img src="img/Mascara.png" alt="mascara" id="mascara">
+                <img src="img/Blusher.png" alt="blusher" id="blusher">
+                <img src="img/Lipstick.png" alt="lipstick" id="lipstick">
+            </td>
+        </tr>
+        <tr>
+            <td>Shopping Cart Items:</td>
+            <td id="goods"></td>
+            <td id="details"></td>
+        </tr>
+        <tr>
+            <td>Shopping Cart Total:</td>
+            <td id="total" colspan="2"></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="clear" colspan="3">Clear</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <span>Summary:</span><br>
+
+    <ul name="infolist" id="infolist"></ul>
+    <ol name="orderedList" id="orderedList"></ol>
+
+    <script src="scripts/events.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/shop.js"></script>
+    <link href="scripts/val.css" rel="stylesheet" type="text/css">
+</body>
+
+</html>

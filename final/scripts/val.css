@@ -1,0 +1,23 @@
+.alert {
+    color: red;
+}
+
+body {
+    font-size: 25px;
+    line-height: 180%;
+    background-color: white;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-size: 25px;
+    background-color: lightblue;
+}
+
+select {
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+label {
+    font-family: "Fira Sans", sans-serif;
+}
